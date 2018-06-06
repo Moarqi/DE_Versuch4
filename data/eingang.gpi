@@ -6,7 +6,7 @@ set terminal wxt size 350,262 enhanced font 'Verdana,10' persist
 set pointsize 0.7
 #set xtics 0.0004
 set key center over horizontal
-set xlabel "Spannung U_GS [V]"
+set xlabel "Spannung U_{GS} [V]"
 set ylabel "Strom I [mA]"
 
 messung = "/home/markus/Dokumente/gitshit/DE_Versuch3/data/Eingangskennlinie.csv"
