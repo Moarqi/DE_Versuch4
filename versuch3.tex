@@ -211,7 +211,10 @@ Zur Bestimmung der Ausgangskennlinie wurde die Gate-Source Spannung auf $U_{GS} 
 Beim Bestimmen der Eingangskennlinie auffällig war der rasche Anstieg des Stromes sobald die Gate-Source Spannung eine gewisse Schwelle erreicht hatte.
 Im Fall der Ausgangskennlinie ist zu bemerken, dass die Höhe auf die sich der Strom bei höherem $U_{DS}$ einpendelt, scheinbar von der konstant gehaltenen Spannung $U_{GS}$ abhängt.
 \section*{Auswertung}
-ERKLÄRUNG DES VERLAUFS DER GRAPHEN
+Wie sich an \autoref{graphEingangskennlinie} erkennen lässt, liegt die Schwellspannung der Diode bei 1,8V für $U_{GS}$. Im Bereich zwischen 1,8V und 2,2V lässt sich der Triodenbereich erkennen, in welchem wir einen exponentiellen Anstieg der Leitfähigkeit feststellen können. Ab 2,2V befindet sich die Diode dann im Sättigungsbereich. Der Arbeitspunkt liegt im Schnitt der Kennlinie under der Arbeitsgeraden, also an der Stelle auf der Kennlinie, welche mit dem anhängenden Verbraucher übereinstimmt. Daraus lässt sich ablesen, welche Spannung nötig ist, um diesen Verbraucher zu versorgen.
+
+In \autoref{graphAusgangskennlinie} sehen wir zwei Ausgangskurven über der Drain-Source-Spannung, einmal bei festgehaltener Gate-Source-Spannung von 2,5V und einmal 3V. Bei der 2,5V Kurve [BITTE HIER WEITERMACHEN D:::]
+
 
 Der ZVN3306A ist ein N-Kanal-Transistor, der ZVP3306A ein P-Kanal Transistor. Daraus ergibt sich folgender wichtiger Unterschied: der N-Kanal-Transistor schaltet bei einer positiven Gate-Source-Spannung (sofern diese die Schwellspannung überwindet), der P-Kanal-Transistor hingegen schaltet nur bei einer negativen Gate-Source-Spannung[REFERENZ SKRIPT Seite 33]. Dies ist bedingt durch den inneren Aufbau:
 P-Kanal MOSFETs haben als Halbleiter zwischen Drain und Source ein n-dotiertes Metall, welches im Kristall-Gitter an manchen Stellen fünf-wertige Atome an Stelle der vier-wertigen Silicium-Atome besitzt. Dadurch gibt es an diesen Stellen einen Elektronenüberschuss, wodurch dieses zusätzliche Atom frei beweglich ist. Wird jetzt am Bulk eine positive Spannung angelegt, so wird das Elektron zum Bulk hingezogen und und es entsteht ein Bereich mit positivem Potenzial am fünf-wertigen Atom. Dieses zieht andere, frei bewegliche Elektronen an und ermöglicht damit eine Ladungsträgerbewegung zwischen Drain und Source durch den Halbleiter.
