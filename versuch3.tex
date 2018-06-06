@@ -44,7 +44,7 @@
 % HIER DIE GRUPPENNUMMER ANPASSEN
 \def \Gruppennummer{Gruppe 5}
 % HIER DEN TUTORNAMEN ANPASSEN
-\def \Tutorname{Lucas Schmidt, Robin Ewers}
+\def \Tutorname{Lukas Schmidt, Robin Ewers}
 
 % Kopfzeile und Fußzeile
 \lhead{\Versuchsnummer}
@@ -56,6 +56,7 @@
 
 % Wird zur Einbindung von Bildern benötigt
 \usepackage{graphicx}
+\graphicspath{{images/}}
 
 % Physikalische Einheiten darstellen
 \usepackage{siunitx}
@@ -100,9 +101,15 @@
 \subsection*{Aufgabe}
 Ziel des Versuches war es MOS-Transistoren zu untersuchen indem für einen Typ (N-MOS) dessen Eingans- und Ausgangskennlinie erfasst wurde. Dabei war der Unterschied von N-MOS zu P-MOS Transistoren herauszustellen. 
 \subsection*{Aufbau}
-Das erste Netzteil wurde am Transistor am Gate-Source-Eingang angelegt und die Spannung zur Feststellung der Eingangskennlinie schrittweise erhöht. Am Drain-Source Eingang wurde ein weiteres Netzteil angeschlossen, an welchem die Spannung zur Festlegung der Ausgangskennlinie schrittweise erhöht wurde. Am jeweils anderen Netzteil wurde die Spannung konstant gelassen und ggf. nachgeregelt. Im Drain-Source Schaltkreis wurde ein Widerstand und das Ampermeter in Reihe geschaltet.
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{aufbau.pdf}
+    \caption{Versuchsaufbau}
+    \label{versuchsaufbau}
+\end{figure}
+Das erste Netzteil wurde am Transistor am Gate-Source-Eingang angelegt und die Spannung zur Feststellung der Eingangskennlinie schrittweise erhöht. Am Drain-Source Eingang wurde ein weiteres Netzteil angeschlossen, an welchem die Spannung zur Festlegung der Ausgangskennlinie schrittweise erhöht wurde. Am jeweils anderen Netzteil wurde die Spannung konstant gelassen und ggf. nachgeregelt. Im Drain-Source Schaltkreis wurde ein Widerstand und das Ampermeter in Reihe geschaltet. Der Aufbau ist in \autoref{versuchsaufbau} zu sehen.
 \subsection*{Verwendete Bauteile}
-Multimeter, N-MOS Transistor ZVN3306A, $100 \Ohm$ Widerstand, zwei Netzteile mit begrenztem Strom von $0.1 A$.
+Multimeter, N-MOS Transistor ZVN3306A, $100 \Omega$ Widerstand, zwei Netzteile mit begrenztem Strom von $0.1 A$.
 \section*{Durchführung}
 \section*{Messergebnisse}
 \subsection*{Beobachtungen}
