@@ -111,7 +111,37 @@ Das erste Netzteil wurde am Transistor am Gate-Source-Eingang angelegt und die S
 \subsection*{Verwendete Bauteile}
 Multimeter, N-MOS Transistor ZVN3306A, $100 \Omega$ Widerstand, zwei Netzteile mit begrenztem Strom von $0.1 A$.
 \section*{Durchführung}
+Im ersten Versuchsteil sollte die Eingangskennlinie des Transistors (hier N-MOS) bestimmt werden. Dazu wurde die Drain-Source Spannung konstant gehalten und die Gate-Source Spannung schrittweise erhöht während der Strom im Drain-Source Schaltkreis gemessen wurde. Beendet wurde die Messung, konnte keine signifikante Veränderung des Stroms festgestellt werden.
+Im zweiten Teil wurde die Ausgangskennlinie erfasst, indem die Gate-Source Spannung konstant gehalten wurde, während die Drain-Source Spannung schrittweise erhöht wurde.
+In beiden Teilen war mit jeder Spannungsveränderung darauf zu achten, dass die konstante Spannung gegebenenfalls nachjustiert wurde.
 \section*{Messergebnisse}
+Zur Bestimmung der Eingangskennlinie wurde die Drain-Source Spannung auf $U_{DS} = 3 V$ geregelt. Für niedrige Spannungen im Gate-Source Kreis war kein Stromfluss zu erkennen, daher wurden die Messergebnisse zwischen $U_{GS} = 0.2 V$ und $U_{GS} = 1.9 V$
+vernachlässigt. Hier ist ein Stromfluss von $I = 0 mA$ anzunehmen.
+\begin{table}[h]
+\centering
+\begin{tabular}{c|c}
+$U_{GS} [V]$ & $I [mA]$ \\ \hline
+$0$ 	& $0$ \\
+$0.1$ 	& $0$ \\
+$0.2$ 	& $0$ \\
+$1.9$	& $0.241$ \\
+$2.0$	& $0.67$ \\
+$2.1$	& $1.518$ \\
+$2.2$	& $3.054$ \\
+$2.3$	& $5.162$ \\
+$2.4$	& $7.765$ \\
+$2.5$	& $10.96$ \\
+$2.6$	& $14.28$ \\
+$2.7$	& $17.83$ \\
+$2.8$	& $21.37$ \\
+$2.9$	& $23.34$ \\
+$3.0$	& $24.1$ \\
+$3.1$	& $24.5$ \\
+$3.2$	& $24.72$
+\end{tabular}
+\caption{Messung der Eingangskennlinie}
+\label{eingangskennlinie}
+\end{table}
 \subsection*{Beobachtungen}
 \section*{Auswertung}
 
