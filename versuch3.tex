@@ -116,7 +116,7 @@ Im zweiten Teil wurde die Ausgangskennlinie erfasst, indem die Gate-Source Spann
 In beiden Teilen war mit jeder Spannungsveränderung darauf zu achten, dass die konstante Spannung gegebenenfalls nachjustiert werden musste.
 \section*{Messergebnisse}
 Zur Bestimmung der Eingangskennlinie wurde die Drain-Source Spannung auf $U_{DS} = 3 V$ geregelt. Für niedrige Spannungen im Gate-Source Kreis war kein Stromfluss zu erkennen, daher wurden die Messergebnisse zwischen $U_{GS} = 0.2 V$ und $U_{GS} = 1.9 V$
-vernachlässigt. Hier ist ein Stromfluss von $I = 0 mA$ anzunehmen. Die Vollständigen Messergebnisse der Eingangskennlinie sind in \autoref{eingangskennlinie} dargestellt.
+vernachlässigt. Hier ist ein Stromfluss von $I = 0 mA$ anzunehmen. Die Vollständigen Messergebnisse der Eingangskennlinie sind in \autoref{eingangskennlinie} zu finden. Die Daten sind graphisch in \autoref{graphEingangskennlinie} dargestellt.
 \begin{table}[h]
 \centering
 \begin{tabular}{c|c}
@@ -142,7 +142,13 @@ $3.2$	& $24.72$
 \caption{Messung der Eingangskennlinie}
 \label{eingangskennlinie}
 \end{table}
-Zur Bestimmung der Ausgangskennlinie wurde die Gate-Source Spannung auf $U_{GS} = 3 V$ im ersten, und auf $U_{GS} = 2.5 V$ im zweiten Durchgang geregelt. Die Messwerte sind in \autoref{ausgang3V} und \autoref{ausgang2-5V} dargestellt.
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{eingang.pdf}
+    \caption{Eingangskennlinie}
+    \label{graphEingangskennlinie}
+\end{figure}
+Zur Bestimmung der Ausgangskennlinie wurde die Gate-Source Spannung auf $U_{GS} = 3 V$ im ersten, und auf $U_{GS} = 2.5 V$ im zweiten Durchgang geregelt. Die Messwerte sind in \autoref{ausgang3V} und \autoref{ausgang2-5V} zu finden und in \autoref{graphAusgangskennlinie} grafisch aufbereitet.
 \begin{table}[htb]
     \centering
     \begin{minipage}[b][][b]{0.45\linewidth}
@@ -195,6 +201,12 @@ Zur Bestimmung der Ausgangskennlinie wurde die Gate-Source Spannung auf $U_{GS} 
 		\label{ausgang2-5V}
     \end{minipage}
 \end{table}
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{ausgang.pdf}
+    \caption{Ausgangskennlinien}
+    \label{graphAusgangskennlinie}
+\end{figure}
 \subsection*{Beobachtungen}
 \section*{Auswertung}
 
