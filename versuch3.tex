@@ -112,11 +112,11 @@ Das erste Netzteil wurde am Transistor am Gate-Source-Eingang angelegt und die S
 Multimeter, N-MOS Transistor ZVN3306A, $100 \Omega$ Widerstand, zwei Netzteile mit begrenztem Strom von $0.1 A$.
 \section*{Durchführung}
 Im ersten Versuchsteil sollte die Eingangskennlinie des Transistors (hier N-MOS) bestimmt werden. Dazu wurde die Drain-Source Spannung konstant gehalten und die Gate-Source Spannung schrittweise erhöht während der Strom im Drain-Source Schaltkreis gemessen wurde. Beendet wurde die Messung, konnte keine signifikante Veränderung des Stroms festgestellt werden.
-Im zweiten Teil wurde die Ausgangskennlinie erfasst, indem die Gate-Source Spannung konstant gehalten wurde, während die Drain-Source Spannung schrittweise erhöht wurde.
-In beiden Teilen war mit jeder Spannungsveränderung darauf zu achten, dass die konstante Spannung gegebenenfalls nachjustiert wurde.
+Im zweiten Teil wurde die Ausgangskennlinie erfasst, indem die Gate-Source Spannung konstant gehalten wurde, während die Drain-Source Spannung schrittweise erhöht wurde. Der Versuch wurde für zwei verschiedene Gate-Source Spannungen durchgeführt.
+In beiden Teilen war mit jeder Spannungsveränderung darauf zu achten, dass die konstante Spannung gegebenenfalls nachjustiert werden musste.
 \section*{Messergebnisse}
 Zur Bestimmung der Eingangskennlinie wurde die Drain-Source Spannung auf $U_{DS} = 3 V$ geregelt. Für niedrige Spannungen im Gate-Source Kreis war kein Stromfluss zu erkennen, daher wurden die Messergebnisse zwischen $U_{GS} = 0.2 V$ und $U_{GS} = 1.9 V$
-vernachlässigt. Hier ist ein Stromfluss von $I = 0 mA$ anzunehmen.
+vernachlässigt. Hier ist ein Stromfluss von $I = 0 mA$ anzunehmen. Die Vollständigen Messergebnisse der Eingangskennlinie sind in \autoref{eingangskennlinie} zu finden. Die Daten sind graphisch in \autoref{graphEingangskennlinie} dargestellt.
 \begin{table}[h]
 \centering
 \begin{tabular}{c|c}
@@ -142,6 +142,71 @@ $3.2$	& $24.72$
 \caption{Messung der Eingangskennlinie}
 \label{eingangskennlinie}
 \end{table}
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{eingang.pdf}
+    \caption{Eingangskennlinie}
+    \label{graphEingangskennlinie}
+\end{figure}
+Zur Bestimmung der Ausgangskennlinie wurde die Gate-Source Spannung auf $U_{GS} = 3 V$ im ersten, und auf $U_{GS} = 2.5 V$ im zweiten Durchgang geregelt. Die Messwerte sind in \autoref{ausgang3V} und \autoref{ausgang2-5V} zu finden und in \autoref{graphAusgangskennlinie} grafisch aufbereitet.
+\begin{table}[htb]
+    \centering
+    \begin{minipage}[b][][b]{0.45\linewidth}
+        \centering
+		\begin{tabular}{c|c}
+		$U_{DS} [V]$ & $I [mA]$ \\ \hline
+		$0.0$ & $0.0$ \\
+		$0.2$ & $1.59$ \\
+		$0.4$ & $3.178$ \\
+		$0.6$ & $4.729$ \\
+		$0.8$ & $6.193$ \\
+		$1.0$ & $7.644$ \\
+		$1.2$ & $8.857$ \\
+		$1.4$ & $9.821$ \\
+		$1.6$ & $10.34$ \\
+		$1.8$ & $10.56$ \\
+		$2.0$ & $10.66$ \\
+		$2.5$ & $10.79$ \\
+		$3.0$ & $10.90$ 
+		\end{tabular}
+		\caption{Messung der Ausgangskennlinie bei $U_{GS} = 3 V$}
+		\label{ausgang3V}
+    \end{minipage}% 
+    \hfill
+    \begin{minipage}[b]{0.45\linewidth}
+        \centering
+		\begin{tabular}{c|c}
+		$U_{DS} [V]$ & $I [mA]$ \\ \hline
+		$0.0$ & $0.0$ \\
+		$0.2$ & $1.666$ \\
+		$0.4$ & $3.334$ \\
+		$0.6$ & $5.0$ \\
+		$0.8$ & $6.656$ \\
+		$1.0$ & $8.314$ \\
+		$1.2$ & $9.949$ \\
+		$1.4$ & $11.58$ \\
+		$1.6$ & $13.22$ \\
+		$1.8$ & $14.78$ \\
+		$2.0$ & $16.38$ \\
+		$2.2$ & $18.0$ \\
+		$2.4$ & $19.56$ \\
+		$2.6$ & $21.13$ \\
+		$2.8$ & $22.64$ \\
+		$3.0$ & $24.13$ \\
+		$3.5$ & $27.41$ \\
+		$4.0$ & $29.63$ \\
+		$5.0$ & $30.67$
+		\end{tabular}
+		\caption{Messung der Ausgangskennlinie bei $U_{GS} = 2.5 V$}
+		\label{ausgang2-5V}
+    \end{minipage}
+\end{table}
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{ausgang.pdf}
+    \caption{Ausgangskennlinien}
+    \label{graphAusgangskennlinie}
+\end{figure}
 \subsection*{Beobachtungen}
 \section*{Auswertung}
 
