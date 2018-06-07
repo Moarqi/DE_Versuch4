@@ -104,9 +104,9 @@
 
 \section*{Versuchsaufbau}
 \subsection*{Aufgabe}
-Ziel des Versuches war es MOS-Transistoren zu untersuchen indem für einen Typ (N-MOS) dessen Eingans- und Ausgangskennlinie erfasst wurde. Dabei war der Unterschied von N-MOS zu P-MOS Transistoren herauszustellen.
+Ziel des Versuches war es, MOS-Transistoren zu untersuchen, indem für einen Typ (N-MOS) dessen Eingans- und Ausgangskennlinie erfasst wurde. Dabei war der Unterschied von N-MOS zu P-MOS Transistoren herauszustellen.
 \subsection*{Erwartung}
-Nach der Vorlesung und der Informationen im Skript, sollten wir mithilfe der Gate-Source-Spannung den Stromfluss an Drain-Source beeinflussen können.
+Es ist zu erwarten, dass durch Regulierung der Gate-Source-Spannung der Stromfluss zwischen Drain und Source beeinflussbar ist.
 \subsection*{Aufbau}
 \begin{figure}
     \centering
@@ -114,7 +114,7 @@ Nach der Vorlesung und der Informationen im Skript, sollten wir mithilfe der Gat
     \caption{Versuchsaufbau}
     \label{versuchsaufbau}
 \end{figure}
-Das erste Netzteil wurde am Transistor am Gate-Source-Eingang angelegt und die Spannung zur Feststellung der Eingangskennlinie schrittweise erhöht. Am Drain-Source Eingang wurde ein weiteres Netzteil angeschlossen, an welchem die Spannung zur Festlegung der Ausgangskennlinie schrittweise erhöht wurde. Am jeweils anderen Netzteil wurde die Spannung konstant gelassen und ggf. nachgeregelt. Im Drain-Source Schaltkreis wurde ein Widerstand und das Ampermeter in Reihe geschaltet. Der Aufbau ist in \autoref{versuchsaufbau} zu sehen.
+Das erste Netzteil wurde am Transistor mit dem Gate-Source-Eingang verbunden und die Spannung zur Feststellung der Eingangskennlinie schrittweise erhöht. Am Drain-Source Eingang wurde ein weiteres Netzteil angeschlossen, an welchem die Spannung zur Festlegung der Ausgangskennlinie schrittweise erhöht wurde. Am jeweils anderen Netzteil wurde die Spannung konstant gelassen und ggf. nachgeregelt. Im Drain-Source Schaltkreis wurde ein Widerstand und das Ampermeter in Reihe geschaltet. Der Aufbau ist in \autoref{versuchsaufbau} zu sehen.
 \subsection*{Verwendete Bauteile}
 Multimeter, N-MOS Transistor ZVN3306A, $100 \Omega$ Widerstand, zwei Netzteile mit begrenztem Strom von $0.1 A$.
 \section*{Durchführung}
@@ -152,7 +152,7 @@ $3.2$	& $24.72$
 \begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{eingang.pdf}
-    \caption{Eingangskennlinie}
+    \caption{Eingangskennlinie mit $U_{DS}=3V$}
     \label{graphEingangskennlinie}
 \end{figure}
 \begin{figure}[H]
@@ -215,8 +215,8 @@ Zur Bestimmung der Ausgangskennlinie wurde die Gate-Source Spannung auf $U_{GS} 
     \end{minipage}
 \end{table}
 \subsection*{Beobachtungen}
-Beim Bestimmen der Eingangskennlinie auffällig war der rasche Anstieg des Stromes sobald die Gate-Source Spannung eine gewisse Schwelle erreicht hatte.
-Im Fall der Ausgangskennlinie ist zu bemerken, dass die Höhe auf die sich der Strom bei höherem $U_{DS}$ einpendelt, scheinbar von der konstant gehaltenen Spannung $U_{GS}$ abhängt.
+Âuffällig war beim Bestimmen der Eingangskennlinie der rasche Anstieg des Stromes, sobald die Gate-Source Spannung eine gewisse Schwelle erreicht hatte.
+Im Fall der Ausgangskennlinie ist zu bemerken, dass die Höhe, auf die sich der Strom bei höherem $U_{DS}$ einpendelt, scheinbar von der konstant gehaltenen Spannung $U_{GS}$ abhängt.
 \section*{Auswertung}
 Wie sich an \autoref{graphEingangskennlinie} erkennen lässt, liegt die Schwellspannung der Diode bei $U_{GS} = 1.8V$. Im Bereich zwischen $1.8V$ und $3.2V$ lässt sich der Triodenbereich erkennen, in welchem wir einen exponentiellen Anstieg der Leitfähigkeit feststellen können. Ab $3.2V$ befindet sich die Diode dann im Sättigungsbereich. Der Arbeitspunkt liegt im Schnitt der Kennlinie under der Arbeitsgeraden, also an der Stelle auf der Kennlinie, welche mit dem anhängenden Verbraucher übereinstimmt. Daraus lässt sich ablesen, welche Spannung nötig ist, um diesen Verbraucher zu versorgen.
 
@@ -230,10 +230,10 @@ In \autoref{graphAusgangskennlinie} sehen wir zwei Ausgangskurven über der Drai
 Der ZVN3306A ist ein N-Kanal-Transistor, der ZVP3306A ein P-Kanal Transistor. Daraus ergibt sich folgender wichtiger Unterschied: der N-Kanal-Transistor schaltet bei einer positiven Gate-Source-Spannung (sofern diese die Schwellspannung überwindet), der P-Kanal-Transistor hingegen schaltet nur bei einer negativen Gate-Source-Spannung. Dies ist bedingt durch den inneren Aufbau:
 \\
 \\
-P-Kanal MOSFETs haben als Halbleiter zwischen Drain und Source ein n-dotiertes Metall, welches im Kristall-Gitter an manchen Stellen fünf-wertige Atome an Stelle der vier-wertigen Silicium-Atome besitzt. Dadurch gibt es an diesen Stellen einen Elektronenüberschuss, wodurch dieses zusätzliche Atom frei beweglich ist. Wird jetzt am Bulk eine positive Spannung angelegt, so wird das Elektron zum Bulk hingezogen und und es entsteht ein Bereich mit positivem Potenzial am fünf-wertigen Atom. Dieses zieht andere, frei bewegliche Elektronen an und ermöglicht damit eine Ladungsträgerbewegung zwischen Drain und Source durch den Halbleiter.
+p-Kanal MOSFETs haben als Halbleiter zwischen Drain und Source ein n-dotiertes Metall, welches im Kristall-Gitter an manchen Stellen fünf-wertige Atome an Stelle der vier-wertigen Silicium-Atome besitzt. Dadurch gibt es an diesen Stellen einen Elektronenüberschuss; dieses zusätzliche Elektron ist frei beweglich. Wird jetzt am Bulk eine positive Spannung angelegt, so wird das Elektron zum Bulk hingezogen und und es entsteht ein Bereich mit positivem Potenzial am fünf-wertigen Atom. Dieses zieht andere, frei bewegliche Elektronen an und ermöglicht damit eine Ladungsträgerbewegung zwischen Drain und Source durch den Halbleiter.
 \\
 \\
-Für n-Kanal MOSFETS sieht das ganze etwas anders aus. Das Halbleitermaterial ist p-dotiert, es wurden also fünf-wertige Atome in das vier-wertige Silicium gebracht. Der Effekt ist dadurch genau umgekehrt: es gibt Elektronen-Lücken, die von freien Elektronen gefüllt werden können. Damit aber eine solche Lücke gefüllt wird, muss eine andere freigegeben werden. Dies lässt sich dann auch vereinfacht als bewegliche positive Ladungsträger betrachten. Legen wir nun eine negative am Bulk an, so werden diese positiven Ladungsträger "aus dem Weg gezogen" und ein Stromfluss zwischen Drain und Source durch den Ladungsträger ist möglich.
+Für n-Kanal MOSFETS sieht das ganze etwas anders aus. Das Halbleitermaterial ist p-dotiert, es wurden also fünf-wertige Atome in das vier-wertige Silicium gebracht. Der Effekt ist dadurch genau umgekehrt zu dem bei p-Kanal MOSEFETs: es gibt Elektronen-Lücken, die von freien Elektronen gefüllt werden können. Damit aber eine solche Lücke gefüllt wird, muss eine andere freigegeben werden. Dies lässt sich dann auch vereinfacht als bewegliche, positive Ladungsträger betrachten. Legen wir nun eine negative Spannung am Bulk an, so werden diese positiven Ladungsträger "aus dem Weg gezogen" und ein Stromfluss zwischen Drain und Source durch den Ladungsträger ist möglich.
 
 \section*{Literaturverzeichnis}
 
