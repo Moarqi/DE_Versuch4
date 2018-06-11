@@ -1,0 +1,20 @@
+#initial
+reset session
+set terminal wxt size 350,262 enhanced font 'Verdana,10' persist
+
+#session settings
+set pointsize 0.7
+#set xtics 0.0004
+set yrange [0:5.5]
+set key center over horizontal
+set xlabel "Spannung U_{IN} [V]"
+set ylabel "Spannung U [V]"
+
+messung = "/home/markus/Dokumente/gitshit/DE_Versuch4/data/simInverter/cmosInverter.txt"
+
+plot messung using 1:4 t "U_{OUT}" with lines
+replot messung using 1:3 t "U_{IN}" with lines
+
+set terminal 	pdf size 7.8cm, 6cm font ",8"
+set output		"/home/markus/Dokumente/gitshit/DE_Versuch4/images/simCMOS.pdf"
+replot
