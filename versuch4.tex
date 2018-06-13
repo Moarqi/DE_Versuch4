@@ -202,8 +202,22 @@ CMOS & $0$
 \label{mesSchaltzeiten}
 \end{table}
 Die mit dem Oszilloskop bestimmten Schaltzeiten sind in \autoref{mesSchaltzeiten} dargestellt.
+
+Zuletzt wurde am Steckbrett der Querstrom gemessen. Die Ergebnisse sind in \autoref{mesQuerstrom} zu finden.
+\begin{table}[h]
+\centering
+\begin{tabular}{c|c}
+Inverter-Typ & Querstrom in [mA] \\ \hline
+Lastwiderstand & $0$ \\
+Anreicherungstyp & $0$ \\
+CMOS & $0$
+\end{tabular}
+\caption{Quer- bzw. Verluststrom je Schaltung}
+\label{mesQuerstrom}
+\end{table}
 \subsection*{Beobachtungen}
 Bei der Bestimmung der Schaltzeiten in der Simulation ist auffällig, dass die Schaltzeit für den Anreicherungsinverter im Vergleich sehr niedrig ist. Hier ist jedoch ebenfalls in Betracht zu ziehen, dass die Spannungsdifferenz der beiden Zustände gerade einmal $2 V$ beträgt. Bei den restlichen Schaltungen beträgt die Differenz volle $5V$.
 \section*{Auswertung}
+Die Aufgenommenen Daten zeigen, dass sowohl Messung als auch Simulation im wesentlichen übereinstimmen. Leichte Abweichungen sind durch Verlustleistungen am Steckbrett und einem idealisierten Szenario in der Simulation zu erklären. Des weiteren Zeigen die Werte, dass das Einsatzgebiet je Inverter schwanken kann. Eine sehr schnelle Schaltzeit bietet der Inverter des Anreicherungstyps, ein sehr geringen Querstrom jedoch der CMOS-Inverter. Diese Feststellung macht den CMOS-Inverter für komplexe elektrische Schaltungen ideal, da dort die Verlustleistung durch Querströme minimiert werden sollte.
 \section*{Literaturverzeichnis}
 \end{document}
