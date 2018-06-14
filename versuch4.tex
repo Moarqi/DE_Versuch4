@@ -104,12 +104,12 @@
 
 \section*{Versuchsaufbau}
 \subsection*{Aufgabe}
-In diesem Versuch war es Ziel, die Vor- und Nachteile von drei Verschiedenen Inverterschaltungen zu untersuchen. Dazu wurden die Schaltungen zum einen am Computer simuliert und zum anderen auf dem Steckbrett aufgebaut und gemessen. Hier sollten die Unterschiede aus Simulation und Messung herausgestellt werden.
+In diesem Versuch war es Ziel, die Vor- und Nachteile dreier, unterschiedlicher Inverterschaltungen zu untersuchen. Dazu wurden die Schaltungen zum einen am Computer simuliert und zum anderen auf dem Steckbrett aufgebaut und gemessen. Hier sollten die Unterschiede aus Simulation und Messung herausgestellt werden.
 \subsection*{Erwartung}
 Erwartet wurde, dass alle Inverterschaltungen ein ähnliches Verhalten zeigen, wobei der ideale Einsatz vom Szenario abhängt.
 \subsection*{Aufbau}
-Als Schaltungen wurde zuerst der Inverter mit Lastwiderstand aufgebaut (\autoref{aufbauLast}). Als zweites der Anreicherungsinverter (\autoref{aufbauAnreicherung}) und zuletzt der CMOS-Inverter (\autoref{aufbauCMOS}).
-In allen Schaltungen waren zwei Spannungsquellen nötig. Die Versorgungsspannung wurde konstant gehalten wobei die Schaltspannung dem Eingang des Inverters entsprach. Als Ausgang ist die Masche am Kondensator zu betrachten.
+Als Schaltungen wurde zuerst der Inverter mit Lastwiderstand aufgebaut (\autoref{aufbauLast}). Als Zweites der Anreicherungsinverter (\autoref{aufbauAnreicherung}) und zuletzt der CMOS-Inverter (\autoref{aufbauCMOS}).
+In allen Schaltungen waren zwei Spannungsquellen nötig. Die Versorgungsspannung wurde konstant gehalten, wobei die Schaltspannung dem Eingang des Inverters entsprach. Als Ausgang ist die Masche am Kondensator zu betrachten.
 \begin{figure}
     \centering
     \includegraphics[width=\linewidth]{aufbauLast.pdf}
@@ -128,8 +128,8 @@ In allen Schaltungen waren zwei Spannungsquellen nötig. Die Versorgungsspannung
     \caption{Aufbau des CMOS-Inverters}
     \label{aufbauCMOS}
 \end{figure}
-Der Querstrom $I_{quer}$ wurde wie in den Schaltplänen eingezeichnet gemessen um Verlustströme aufzunehmen.
-Um die Schaltzeit zu bestimmen, war des weiteren der Funktionsgenerator und das Oszilloskop nötig. Hier wurde der Funktionsgenerator anstelle der Eingangs-Stromversorgung eingebaut und der Ausgang am Kondensator über das Oszilloskop aufgenommen (exemplarisch im Schaltbild \autoref{aufbauLast} dargestellt).
+Der Querstrom $I_{quer}$ wurde wie in den Schaltplänen eingezeichnet gemessen, um Verlustströme aufzunehmen.
+Um die Schaltzeit zu bestimmen, war des Weiteren der Funktionsgenerator und das Oszilloskop nötig. Hier wurde der Funktionsgenerator anstelle der Eingangs-Stromversorgung eingebaut und der Ausgang am Kondensator über das Oszilloskop aufgenommen (exemplarisch im Schaltbild \autoref{aufbauLast} dargestellt).
 \subsection*{Verwendete Bauteile}
 Transistoren vom Typ ZVN3306A und ZVP3306A (nur CMOS-Inverter), Spannungsquellen mit begrenztem Strom, Multimeter, Kondensator mit einer Kapazität von $470 nF$, ein Widerstand mit $100 \Omega$ (nur Inverter mit Lastwiderstand), Funktionsgenerator und Oszilloskop (Schaltzeitmessung).
 \section*{Durchführung Simulation}
@@ -186,17 +186,17 @@ CMOS & $0.0139$
     \label{simTimeCMOS}
 \end{figure}
 \section*{Durchführung Messung}
-Ähnlich wie in der Simulation wurde bei der Messung am Steckbrett zunächst die Eingangsspannung schrittweise von null bis fünf Volt erhöht. 
-Zur Messung der Schaltzeiten wurde eine vom Funktionsgenerator generierte Rechteckskurve mit einer Amplitude von $5V$ genutzt und die Eingangsspannung mit der Ausgangsspannung am Oszilloskop verglichen wobei die Schaltzeit mithilfe der Cursor gemessen wurde.
+Ähnlich wie in der Simulation, wurde bei der Messung am Steckbrett zunächst die Eingangsspannung schrittweise von 0 bis 5 Volt erhöht. 
+Zur Messung der Schaltzeiten wurde eine vom Funktionsgenerator generierte Rechteckskurve mit einer Amplitude von $5V$ genutzt und die Eingangsspannung mit der Ausgangsspannung am Oszilloskop verglichen, wobei die Schaltzeit mithilfe der Cursor gemessen wurde.
 Die Versorgungsspannung blieb konstant bei fünf Volt.
 \section*{Messergebnisse Messung}
 \begin{table}[h]
 \centering
 \begin{tabular}{c|c}
 Inverter-Typ & Schaltzeit in ms \\ \hline
-Lastwiderstand & $0$ \\
-Anreicherungstyp & $0$ \\
-CMOS & $0$
+Lastwiderstand & $36$ \\
+Anreicherungstyp & $3600$ \\
+CMOS & $3000$
 \end{tabular}
 \caption{Schaltzeiten nach Messung der Invertertypen}
 \label{mesSchaltzeiten}
@@ -208,16 +208,17 @@ Zuletzt wurde am Steckbrett der Querstrom gemessen. Die Ergebnisse sind in \auto
 \centering
 \begin{tabular}{c|c}
 Inverter-Typ & Querstrom in [mA] \\ \hline
-Lastwiderstand & $0$ \\
-Anreicherungstyp & $0$ \\
-CMOS & $0$
+Lastwiderstand & $23,5$ \\
+Anreicherungstyp & $35,8$ \\
+CMOS & $2,0$
 \end{tabular}
 \caption{Quer- bzw. Verluststrom je Schaltung}
 \label{mesQuerstrom}
 \end{table}
 \subsection*{Beobachtungen}
 Bei der Bestimmung der Schaltzeiten in der Simulation ist auffällig, dass die Schaltzeit für den Anreicherungsinverter im Vergleich sehr niedrig ist. Hier ist jedoch ebenfalls in Betracht zu ziehen, dass die Spannungsdifferenz der beiden Zustände gerade einmal $2 V$ beträgt. Bei den restlichen Schaltungen beträgt die Differenz volle $5V$.
+Weiterhin fällt auf, dass die gemessenen Schaltzeiten aus der Simulation um mehrere Zehnerpotenzen kleiner sind, als die aus dem realen Aufbau. Aber auch als prozentuale Differenz ergeben sich Unstimmigkeiten: In der Simulation war der Anreicherungs-Inverter jener mit der geringsten Schaltzeit, im realen Aufbau jedoch übernahm der Inverter mit Lastwiderstand die Führung.
 \section*{Auswertung}
-Die Aufgenommenen Daten zeigen, dass sowohl Messung als auch Simulation im wesentlichen übereinstimmen. Leichte Abweichungen sind durch Verlustleistungen am Steckbrett und einem idealisierten Szenario in der Simulation zu erklären. Des weiteren Zeigen die Werte, dass das Einsatzgebiet je Inverter schwanken kann. Eine sehr schnelle Schaltzeit bietet der Inverter des Anreicherungstyps, ein sehr geringen Querstrom jedoch der CMOS-Inverter. Diese Feststellung macht den CMOS-Inverter für komplexe elektrische Schaltungen ideal, da dort die Verlustleistung durch Querströme minimiert werden sollte.
+Die Aufgenommenen Daten zeigen, dass das grundlegende Verhalten von Aufbau und Simulation vergleichbar sind. Die riesigen Unterschiede in den Schaltzeiten zwischen Simulation und Aufbau werden daran liegen, dass die Simulation eine idealisierte Annahme des Aufbaus ist. Dadurch werden viele Effekte in LTSpice, wie beispielsweise das Lade-/Entladeverhalten der Bauteile oder aber auch Verlustleistungen in den Drähten, nicht (oder anders) berücksichtigt. Des weiteren Zeigen die Werte, dass das Einsatzgebiet je Inverter schwanken kann. Eine sehr schnelle Schaltzeit bietet der Inverter des mit Lastwiderstand, welche diesen besonders geeignet macht für Schlatungen, welche mit hohen Frequenzen arbeiten; einen sehr geringen Querstrom jedoch der CMOS-Inverter. Diese Feststellung macht den CMOS-Inverter für komplexe elektrische Schaltungen ideal, da dort die Verlustleistung durch Querströme minimiert werden sollte.
 \section*{Literaturverzeichnis}
 \end{document}
