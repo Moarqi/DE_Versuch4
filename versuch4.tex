@@ -139,19 +139,19 @@ Die Ergebnisse wurde in Form von Datentabellen gesichert und anschließend geplo
 \begin{figure}
     \centering
     \includegraphics[width=\linewidth]{simLast.pdf}
-    \caption{Schrittweise Erhöhung der Eingangsspannung \\ Inverter mit Lastwiderstand}
+    \caption{Schrittweise Erhöhung der Eingangsspannung \\ Inverter mit Lastwiderstand in Simulation}
     \label{simLast}
 \end{figure}
 \begin{figure}
     \centering
     \includegraphics[width=\linewidth]{simAnreicherung.pdf}
-    \caption{Schrittweise Erhöhung der Eingangsspannung \\ Anreicherungsinverter}
+    \caption{Schrittweise Erhöhung der Eingangsspannung \\ Anreicherungsinverter in Simulation}
     \label{simAnreicherung}
 \end{figure}
 \begin{figure}
     \centering
     \includegraphics[width=\linewidth]{simCMOS.pdf}
-    \caption{Schrittweise Erhöhung der Eingangsspannung \\ CMOS-Inverter}
+    \caption{Schrittweise Erhöhung der Eingangsspannung \\ CMOS-Inverter in Simulation}
     \label{simCMOS}
 \end{figure}
 Die Messergebnisse zum Verhalten beim Erhöhen der Eingangsspannung sind in \autoref{simLast} bis \autoref{simCMOS} dargestellt. 
@@ -220,5 +220,8 @@ Bei der Bestimmung der Schaltzeiten in der Simulation ist auffällig, dass die S
 Weiterhin fällt auf, dass die gemessenen Schaltzeiten aus der Simulation um mehrere Zehnerpotenzen kleiner sind, als die aus dem realen Aufbau. Aber auch als prozentuale Differenz ergeben sich Unstimmigkeiten: In der Simulation war der Anreicherungs-Inverter jener mit der geringsten Schaltzeit, im realen Aufbau jedoch übernahm der Inverter mit Lastwiderstand die Führung.
 \section*{Auswertung}
 Die Aufgenommenen Daten zeigen, dass das grundlegende Verhalten von Aufbau und Simulation vergleichbar sind. Die riesigen Unterschiede in den Schaltzeiten zwischen Simulation und Aufbau werden daran liegen, dass die Simulation eine idealisierte Annahme des Aufbaus ist. Dadurch werden viele Effekte in LTSpice, wie beispielsweise das Lade-/Entladeverhalten der Bauteile oder aber auch Verlustleistungen in den Drähten, nicht (oder anders) berücksichtigt. Des weiteren Zeigen die Werte, dass das Einsatzgebiet je Inverter schwanken kann. Eine sehr schnelle Schaltzeit bietet der Inverter des mit Lastwiderstand, welche diesen besonders geeignet macht für Schlatungen, welche mit hohen Frequenzen arbeiten; einen sehr geringen Querstrom jedoch der CMOS-Inverter. Diese Feststellung macht den CMOS-Inverter für komplexe elektrische Schaltungen ideal, da dort die Verlustleistung durch Querströme minimiert werden sollte.
+
+%TODO: ENTFERNEN?
+
 \section*{Literaturverzeichnis}
 \end{document}
