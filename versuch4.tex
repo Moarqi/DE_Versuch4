@@ -107,6 +107,8 @@
 In diesem Versuch war es Ziel, die Vor- und Nachteile dreier, unterschiedlicher Inverterschaltungen zu untersuchen. Dazu wurden die Schaltungen zum einen am Computer simuliert und zum anderen auf dem Steckbrett aufgebaut und gemessen. Hier sollten die Unterschiede aus Simulation und Messung herausgestellt werden.
 \subsection*{Erwartung}
 Erwartet wurde, dass alle Inverterschaltungen ein ähnliches Verhalten zeigen, wobei der ideale Einsatz vom Szenario abhängt.
+Unterschiede wurden vor allem in Bezug auf die Schaltzeit erwartet, da die Aufbauten unterschiedlich schnell auf eine Änderung des Eingangssignal reagieren können.
+Es wurde vermutet, dass der CMOS-Inverter die geringste statische Verlustleistung besitzt. Wie die anderen Aufbauten sich in Bezug auf den Querstrom verhielten, konnte nicht vermutet werden.
 \subsection*{Aufbau}
 Als Schaltungen wurde zuerst der Inverter mit Lastwiderstand aufgebaut (\autoref{aufbauLast}). Als Zweites der Anreicherungsinverter (\autoref{aufbauAnreicherung}) und zuletzt der CMOS-Inverter (\autoref{aufbauCMOS}).
 In allen Schaltungen waren zwei Spannungsquellen nötig. Die Versorgungsspannung wurde konstant gehalten, wobei die Schaltspannung dem Eingang des Inverters entsprach. Als Ausgang ist die Masche am Kondensator zu betrachten.
@@ -170,19 +172,19 @@ CMOS & $0.0139$
 \begin{figure}
     \centering
     \includegraphics[width=\linewidth]{simTimeLast.pdf}
-    \caption{Schaltzeitmessung in der Simulation \\ Inverter mit Lastwiderstand}
+    \caption{Umschaltvorgang in der Simulation \\ Inverter mit Lastwiderstand}
     \label{simTimeLast}
 \end{figure}
 \begin{figure}
     \centering
     \includegraphics[width=\linewidth]{simTimeAnreicherung.pdf}
-    \caption{Schaltzeitmessung in der Simulation \\ Anreicherungsnverter}
+    \caption{Umschaltvorgang in der Simulation \\ Anreicherungsnverter}
     \label{simTimeAnreicherung}
 \end{figure}
 \begin{figure}
     \centering
     \includegraphics[width=\linewidth]{simTimeCMOS.pdf}
-    \caption{Schaltzeitmessung in der Simulation \\ CMOS-Inverter}
+    \caption{Umschaltvorgang in der Simulation \\ CMOS-Inverter}
     \label{simTimeCMOS}
 \end{figure}
 \section*{Durchführung Messung}
@@ -219,9 +221,10 @@ CMOS & $2,0$
 Bei der Bestimmung der Schaltzeiten in der Simulation ist auffällig, dass die Schaltzeit für den Anreicherungsinverter im Vergleich sehr niedrig ist. Hier ist jedoch ebenfalls in Betracht zu ziehen, dass die Spannungsdifferenz der beiden Zustände gerade einmal $2 V$ beträgt. Bei den restlichen Schaltungen beträgt die Differenz volle $5V$.
 Weiterhin fällt auf, dass die gemessenen Schaltzeiten aus der Simulation um mehrere Zehnerpotenzen kleiner sind, als die aus dem realen Aufbau. Aber auch als prozentuale Differenz ergeben sich Unstimmigkeiten: In der Simulation war der Anreicherungs-Inverter jener mit der geringsten Schaltzeit, im realen Aufbau jedoch übernahm der Inverter mit Lastwiderstand die Führung.
 \section*{Auswertung}
+Grundsätzlich Invertiert ein Inverter das Eingangssignal, da die Versorgungsspannung bei anliegender Eins über den Transistor zur Erde niederohmig abgeleitet wird. Dadurch fließt kein Strom am höherohmigen Ausgang. Bei anliegender Null sperrt der Transistor und die Versorgungsspannung liegt am Ausgang an.
+Als statischen Querstrom bezeichnet man den Strom, welcher im Kreis der Versorgungsspannung fließt, wenn das Eingangssignal Null ist, der Invertierende Transistor also sperrt. Im Gegensatz dazu ist der dynamische Querstrom derjenige, der bei Schaltvorgängen entsteht.
 Die Aufgenommenen Daten zeigen, dass das grundlegende Verhalten von Aufbau und Simulation vergleichbar sind. Die riesigen Unterschiede in den Schaltzeiten zwischen Simulation und Aufbau werden daran liegen, dass die Simulation eine idealisierte Annahme des Aufbaus ist. Dadurch werden viele Effekte in LTSpice, wie beispielsweise das Lade-/Entladeverhalten der Bauteile oder aber auch Verlustleistungen in den Drähten, nicht (oder anders) berücksichtigt. Des weiteren Zeigen die Werte, dass das Einsatzgebiet je Inverter schwanken kann. Eine sehr schnelle Schaltzeit bietet der Inverter des mit Lastwiderstand, welche diesen besonders geeignet macht für Schlatungen, welche mit hohen Frequenzen arbeiten; einen sehr geringen Querstrom jedoch der CMOS-Inverter. Diese Feststellung macht den CMOS-Inverter für komplexe elektrische Schaltungen ideal, da dort die Verlustleistung durch Querströme minimiert werden sollte.
-
-%TODO: ENTFERNEN?
-
-\section*{Literaturverzeichnis}
+In Bezug auf die Größe der Bauteile kann kein eindeutiger Vorteil beobachtet werden. ALlerdings wurden im Versuch auch sehr große Bauteile verwendet. Als Integrierter Schaltkreis sind alle Schaltungen vermutlich sehr viel kleiner.
+Dennoch kann ein Inverter prinzipiell auch nur durch einen Transistor abgebildet werden (Inverter mit Lastwiderstand). Dieser bietet, neben der vielen Nachteile, einen Baugrößenvorteil.
+Der statische Querstrom ist bei dem CMOS-Inverter im Vergleich zu den anderen so niedrig, da nur diese Bauform den den Fluss des Querstroms annähernd total blockiert. Nur sehr geringe Verlustleistungen entstehen, da auch die Transistoren keine idealen Bauelemente sind. In allen anderen Aufbauten schaltet nur ein Transistor den Stromfluss, wodurch der Widerstand (oder der Transistor) konstant durchflossen wird und ein recht hoher statischer Querstrom entsteht.
 \end{document}
